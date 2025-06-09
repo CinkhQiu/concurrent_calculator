@@ -10,7 +10,12 @@ include_directories(third_party/thread_pool)
 include_directories(third_party/MemoryPool)
 include_directories(third_party/spdlog/include)
 
-add_executable(app src/main.cpp)
+add_executable(app
+    src/main.cpp
+    src/Calculator.cpp
+    src/Logger.cpp
+    src/ThreadPoolWrapper.cpp
+)
 
 set_target_properties(app PROPERTIES
     RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin
