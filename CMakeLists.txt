@@ -5,3 +5,7 @@ project(Concurrent_Calculator)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+include_directories(include)
+include_directories(third_party/thread_pool)
+include_directories(third_party/MemoryPool)
+include_directories(third_party/spdlog/include)
