@@ -15,6 +15,7 @@ void simulate_user_request(int user_id, ThreadPoolWrapper& pool) {
 }
 
 int main() {
+    std::cout << "Begin run main()\n";
     init_logger();
     ThreadPoolWrapper pool(4);
 
@@ -24,5 +25,6 @@ int main() {
 
     // 简单等待所有任务完成
     std::this_thread::sleep_for(std::chrono::seconds(2));
+    std::cout << "End main()\n";
     return 0;
 }
